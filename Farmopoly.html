@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmopoly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <div class="board">
+        <!-- Wheat plot -->
+        <div class="plot" id="wheat-plot">
+            <div class="plot-header">
+                <div class="crop-name">Wheat</div>
+                <div class="cost">Cost: 100</div>
+            </div>
+            <!--<img src="images/wheat.png" alt="Wheat"-->
+            <button class="buy-button" data-cost="100">Buy</button>
+        </div>
+
+        <!-- Carrot plot -->
+        <div class="plot" id="carrot-plot">
+            <div class="plot-header">
+                <div class="crop-name">Carrots</div>
+                <div class="cost">Cost: 200</div>
+            </div>
+            <!--<img src="images/corn.png" alt="Carrots">-->
+            <button class="buy-button" data-cost="200">Buy</button>
+        </div>
+
+        <!-- Potato plot -->
+        <div class="plot" id="potato-plot">
+            <div class="plot-header">
+                <div class="crop-name">Potato</div>
+                <div class="cost">Cost: 350</div>
+            </div>
+            <!--<img src="images/forest.png" alt="Forest">-->
+            <button class="buy-button" data-cost="350">Buy</button>
+        </div>
+
+        <!-- Forest plot -->
+        <div class="plot" id="forest-plot">
+            <div class="plot-header">
+                <div class="crop-name">Forest</div>
+                <div class="cost">Cost: 500</div>
+            </div>
+            <!--<img src="images/forest.png" alt="Forest">-->
+            <button class="buy-button" data-cost="500">Buy</button>
+        </div>
+    </div>
+
+    <div id="balance">Aitchbeesea noob dollar: $1000</div>
+
+    <div id="info-display-container">
+        <div class="info-display">
+            <div class="crop-info" id="wheat-info">
+                <div class="crop-name" style="color: #DAA520;">Wheat</div>
+                <div class="crop-per-second" id="wheat-per-second">5 /3s</div>
+                <div class="crop-total" id="wheat-total">0</div> <!-- This is where the total should be displayed -->
+            </div>
+            <div class="crop-info" id="carrot-info">
+                <div class="crop-name" style="color: #FF4500;">Carrots</div>
+                <div class="crop-per-second" id="carrot-per-second">10 /3s</div>
+                <div class="crop-total" id="carrot-total">0</div>
+            </div>
+            <div class="crop-info" id="potato-info">
+                <div class="crop-name" style="color: #FF4500;">Potato</div>
+                <div class="crop-per-second" id="potato-per-second">10 /3s</div>
+                <div class="crop-total" id="potato-total">0</div>
+            </div>
+            <div class="crop-info" id="forest-info">
+                <div class="crop-name" style="color: #228B22;">Forest</div>
+                <div class="crop-per-second" id="forest-per-second">20 /3s</div>
+                <div class="crop-total" id="forest-total">0</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="upgrades">
+        <div class="upgrade">
+            <span>Upgrade 1</span>
+            <button class="upgrade-button" data-upgrade="1" data-cost="100">Buy</button>
+        </div>
+        <div class="upgrade">
+            <span>Upgrade 2</span>
+            <button class="upgrade-button" data-upgrade="2" data-cost="200">Buy</button>
+        </div>
+        <!-- Add more upgrades as needed -->
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2b2b2b;
+}
+
+#balance {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    border: 5px solid #333;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.plot {
+    border: 1px solid #a9a9a9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 20px;
+    position: relative;
+    margin: 5px;
+    flex: 1 1 calc(33.333% - 10px);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    width: 120px; /* or whatever width you prefer */
+    height: 120px; /* or whatever height you prefer */
+    background-size: 50%; /* Set to any value less than 100% */
+    background-position: center; /* Ensures the background image remains centered */
+    background-repeat: no-repeat;
+}
+
+.plot-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 10px;
+    /*border-radius: 15px;*/
+    color: white;
+}
+
+.crop-name, .cost {
+    margin: 0;
+    padding: 2px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.buy-button {
+    margin-top: 10px;
+    align-self: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #45a049;
+}
+
+.plot img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    image-rendering: pixelated;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+}
+
+.info-display {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #202020;
+    padding: 10px;
+    max-width: 300px;
+    width: 80px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    color: white;
+}
+
+.upgrades {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2e2e2e;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.upgrade {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    color: #f1f1f1;
+}
+
+.upgrade-button {
+    padding: 4px 10px;
+    background-color: #32CD32;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upgrade-button:hover {
+    background-color: #2e8b57;
+}
+
+.plot.owned {
+    background-color: #37eb97;
+}
+
+.custom-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.popup-content {
+    width: 300px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+#wheat-plot .crop-name {
+    color: #DAA520; /* Golden color for Wheat */
+}
+
+#carrot-plot .crop-name {
+    color: #FF4500; /* OrangeRed color for Carrots */
+}
+
+#potato-plot .crop-name {
+    color: #ffe600; /* OrangeRed color for Carrots */
+}
+
+#forest-plot .crop-name {
+    color: #228B22; /* ForestGreen color for Forest */
+}
+
+#wheat-plot {
+    background-image: url('images/wheat.png');
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    background-size: 20%
+}
+
+#carrot-plot {
+    background-image: url('images/carrot.png');
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    background-size: 20%
+}
+
+#potato-plot {
+    background-image: url('images/corn.png');
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    background-size: 20%
+}
+
+#forest-plot {
+    background-image: url('images/forest.png');
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    background-size: 20%
+}
